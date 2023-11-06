@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+<body>
+    <h1>Display Contacts</h1>
+    <div class="container">
+        <h1>Contact Information</h1>
+        <div *ngIf="contact">
+          <p><strong>First Name:</strong> {{ contact.FirstName }}</p>
+          <p><strong>Last Name:</strong> {{ contact.LastName }}</p>
+          <p><strong>Email:</strong> {{ contact.Email }}</p>
+          <p><strong>Phone Number:</strong> {{ contact.PhoneNumber }}</p>
+          <p><strong>Address:</strong> {{ contact.Address }}</p>
+        </div>
+        <a routerLink="/contacts">Back to Contacts</a>
+      </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<p>prom works!</p>
+
+<p>{{'hey!'|uppercase}}</p>
+<p>{{'hey!'|lowercase}}</p>
+<p>{{time}}</p>
+<!-- <p>{{time |date:'short'}}</p>
+<p>{{time |date:'full'}}</p>
+<p>{{time |date:'long'}}</p>
+<p>{{time |date:'shortTime'}}</p>
+<p>{{time |date:'fullTime'}}</p>
+<p>{{time |date:'longTime'}}</p>
+<p>{{time |date:'shortDate'}}</p>
+<p>{{time |date:'fullDate'}}</p>
+<p>{{time |date:'longDate'}}</p>
+<p>{{time |date:'d/m/y'}}</p> -->
+<h1>
+    {{'Agriculture' |slice:4:11}}
+</h1>
+<!-- <p>
+    {{5000 |currency:'GHS':'symbol-narrow'}}
+</p>
+<p>
+    {{8000 |currency:'GHS':'code'}}
+</p>
+<p>
+    {{21/97 |percent}}
+</p>
+<p>
+    {{27.83967 |number:'4.1-2'}}
+</p> -->
+
+<div *ngIf="name">
+    <p>True</p>
+</div>
+
+<div [ngSwitch]="'Hello'">
+    <p *ngSwitchCase="'Hello'">True</p>
+    <p *ngSwitchCase="'Hi'">False</p>
+    <p *ngSwitchDefault>None</p>
+</div>
+
+<div [ngSwitch]="condition">
+    <div *ngSwitchCase="color1">Red!</div>
+    <div *ngSwitchCase="color2">Blue!</div>
+</div>
+<div>
+    <button (click)="changeColor()">Change</button>
+</div>

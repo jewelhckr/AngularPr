@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div *ngFor="let show of showArray">
+        <p>{{showArray}}</p>
+    </div>
+
+    <div class="container">
+        <div class="row" *ngFor="let contact of createContact">
+            <div class="my-2 shadow-lg">
+                <h1>Contacts</h1>
+                <p>{{contact.FirstName}}</p>
+                <p>{{contact.LastName}}</p>
+                <p>{{contact.Email}}</p>
+                <p>{{contact.Address}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

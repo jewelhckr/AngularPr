@@ -1,0 +1,74 @@
+//HTML//
+
+<div class="container shadow-lg">
+    <input type="text" [(ngModel)]="comment">
+    <button></button>
+    <div class="row shadow" *ngFor="let item of foodItems" 
+    style="cursor: pointer;" (click)="sendItem(item)">
+        <p class="text-center text-primary">{{item.name}}</p>
+    </div>
+    <div class="row shadow-lg">
+        <app-newerState></app-newerState>
+    </div>
+</div>
+
+//TS//
+
+import { Component } from '@angular/core';
+
+interface FoodInterface{
+  name:string,
+  price:number,
+  quantity:number,
+  category:string,
+  availability:boolean,
+}
+
+@Component({
+  selector: 'app-new-state',
+  templateUrl: './new-state.component.html',
+  styleUrls: ['./new-state.component.css']
+})
+export class NewStateComponent {
+  constructor (public itemService:NewStateService){}
+  public comment=''
+  public foodItems:FoodInterface[]=[
+    {
+      name:'Rice',
+      price:10,
+      quantity:20,
+      category:'Food',
+      availability:true,
+    },
+    {
+      name:'Berry',
+      price:20,
+      quantity:30,
+      category:'Fruit',
+      availability:true,
+    },
+    {
+      name:'Yam',
+      price:50,
+      quantity:0,
+      category:'Food',
+      availability:false,
+    },
+    {
+      name:'Cookie',
+      price:80,
+      quantity:100,
+      category:'Snack',
+      availability:true,
+    },
+  ]
+  ngOnInit(){
+    console.log(this.itemService);
+    
+  }
+
+  sendItem(item:FoodInterface){
+    // console.log(item);
+    this.itemService.subBehavior.next(item)
+  }
+}

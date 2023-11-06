@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>To-Do</title>
+</head>
+<body>
+    <div class="container-fluid form-control shadow-lg">
+        <h1 class="text-info text-center display-3 fw-bold">To-Do List</h1>
+        <!-- <input class="form-control my-2" type="text" placeholder="To_do..." [(ngModel)]="todo">
+        <input class="form-control my-2" type="text" placeholder="Category..." [(ngModel)]="category">
+        <input class="form-control my-2" type="time" placeholder="Time..." [(ngModel)]="time">
+        <input class="form-control my-2" type="date" placeholder="Date..." [(ngModel)]="date"> -->
+        <button class="btn btn-info form-control" (click)="addTodo()">Add</button>
+    </div>
+
+    <div *ngIf="">
+        <table class="table table-striped table-info w-75 mx-auto">
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>To_Do</th>
+                    <th>Category</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let myTodo of todoList; let id = index">
+                    <td>{{id + 1}}</td>
+                    <td>{{myTodo.Todo}}</td>
+                    <td>{{myTodo.Category}}</td>
+                    <td>{{myTodo.Time}}</td>
+                    <td>{{myTodo.Date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<p>newstate works!</p>
+<div class="container shadow-lg">
+    <input type="text" [(ngModel)]="comment">
+    <button></button>
+    <div class="row shadow" *ngFor="let item of foodItems" 
+    style="cursor: pointer;" (click)="sendItem(item)">
+        <p class="text-center text-primary">{{item.name}}</p>
+    </div>
+    <div class="row shadow-lg">
+        <app-newerState></app-newerState>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container" *ngIf="itemObj.name">
+    <input type="text" class="form-control my-2" value="{{itemObj.name}}" [(ngModel)]="itemObj.name">
+    <h1 class="text-center display-3 fw-light text-primary">Item Details</h1>
+    <p class="text-center text-info">
+        Name: {{itemObj.name}}
+    </p>
+    <p class="text-center text-info">
+        Price: {{itemObj.price}}
+    </p>
+    <p class="text-center text-info">
+        Quantity: {{itemObj.quantity}}
+    </p>
+    <p class="text-center text-info">
+        Category: {{itemObj.category}}
+    </p>
+    <p class="text-center text-info">
+        Available: {{itemObj.availability}}
+    </p>
+</div>
