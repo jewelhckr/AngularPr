@@ -17,6 +17,7 @@ import { ErrorComponent } from './error/error.component';
 import { PromComponent } from './prom/prom.component';
 import { NewerStateComponent } from './newer-state/newer-state.component';
 import { NewstateComponent } from './newstate/newstate.component';
+import { FormsComponent } from './forms/forms.component';
 // import { HttpClient } from ''
 
 
@@ -36,6 +37,7 @@ import { NewstateComponent } from './newstate/newstate.component';
     PromComponent,
     NewerStateComponent,
     NewstateComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,

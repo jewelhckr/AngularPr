@@ -72,3 +72,6 @@ export class NewStateComponent {
     this.itemService.subBehavior.next(item)
   }
 }
+
+Validating a Reactive Form
+Validating a Template Driven Form
