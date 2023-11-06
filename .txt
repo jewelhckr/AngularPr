@@ -75,3 +75,5 @@ export class NewStateComponent {
 
 Validating a Reactive Form
 Validating a Template Driven Form
+
+Array of Names from the api
