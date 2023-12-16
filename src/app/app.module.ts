@@ -18,7 +18,7 @@ import { PromComponent } from './prom/prom.component';
 import { NewerStateComponent } from './newer-state/newer-state.component';
 import { NewstateComponent } from './newstate/newstate.component';
 import { FormsComponent } from './forms/forms.component';
-// import { HttpClient } from '.angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -44,7 +44,7 @@ import { FormsComponent } from './forms/forms.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    Http
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
