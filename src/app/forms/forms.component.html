@@ -1,1 +1,16 @@
-<p>forms works!</p>
+<form action="" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+    <div class="container-fluid my-3">
+        <div class="container shadow">
+            <h1 class="text-center text-info">Form Handling</h1>
+            <input formControlName="firstName" placeholder="First Name..." class="form-control my-2 " type="text">
+            <input formControlName="lastName" placeholder="Last Name..." class="form-control my-2 " type="text">
+            <input formControlName="email" placeholder="Email..." class="form-control my-2 " type="email">
+            <input formControlName="password" placeholder="Password..." class="form-control my-2 " type="password">
+            <button type="submit" class="btn btn-info form-control my-2">Submit</button>
+            <div *ngIf="alertMessage" class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{ alertMessage }}
+            </div>
+        </div>
+    </div>
+    
+</form>

@@ -15,6 +15,7 @@ import { ErrorComponent } from './error/error.component';
 import { PromComponent } from './prom/prom.component';
 import { NewerStateComponent } from './newer-state/newer-state.component';
 import { NewstateComponent } from './newstate/newstate.component';
+import { FormsComponent } from './forms/forms.component';
 
 const routes: Routes = [
   {path: "", component:HomeComponent},
@@ -24,7 +25,7 @@ const routes: Routes = [
   {path:'home', redirectTo:'/', pathMatch:'full'},
   {path: "navbar", component:NavbarComponent},
   {path: "cart", component:CartComponent},
-  {path: "sign-up", component:SignUpComponent},
+  {path: "forms", component:FormsComponent},
   {path: "todo", component:TodoComponent},
   {path: "prom", component:PromComponent},
   {path: "newstate", component:NewstateComponent},
